@@ -67,7 +67,7 @@ def main():
     text_chunks = get_text_chunks(raw_text)
     vector_store = get_vector_store(text_chunks)
     st.session_state.conversation = get_conversational_chain(vector_store)
-    st.success("AI initiated!!! Begin Query... ")
+  
 
     if user_question:
         user_input(user_question, pdf_reader)
