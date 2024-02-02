@@ -51,16 +51,16 @@ def user_input(user_question, pdf_reader):
 
 def main():
     st.set_page_config("TeReSA AI")
-
+    
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        st.title("TeReSA AI")
     user_question = st.text_input("Query About product")
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
     if "chatHistory" not in st.session_state:
         st.session_state.chatHistory = None
 
-    col1, col2 = st.columns([1, 2])
-    with col1:
-        st.title("TeReSA AI")
     pdf_reader = PdfReader("data1.pdf")
 
     raw_text = get_pdf_text(pdf_reader)
