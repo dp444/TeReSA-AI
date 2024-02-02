@@ -60,8 +60,7 @@ def main():
 
     col1, col2 = st.columns([1, 2])
     with col1:
-        st.title("TeReSA.")
-        st.write("Your Personal Shopping Assistant.")
+        st.title("TeReSA AI")
     pdf_reader = PdfReader("data1.pdf")
 
     raw_text = get_pdf_text(pdf_reader)
