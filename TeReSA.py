@@ -52,7 +52,7 @@ def user_input(user_question, pdf_reader):
 def main():
     st.set_page_config("TeReSA AI")
     
-    col1, col2 = st.columns([1, 2])
+    col1 = st.columns([1])
     with col1:
         st.title("TeReSA AI")
     user_question = st.text_input("Query About product")
